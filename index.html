@@ -1,567 +1,77 @@
 
-<!DOCTYPE html>
-<html lang="en" class="">
-
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-    Priyo TV - Watch Live TV, Movies, and Shows Online
-</title>
-
-<link rel="canonical" href="https://priyotv.net" />
-<link rel="alternate" hreflang="en-US" href="https://priyotv.net" />
-
-<!-- Primary Meta Tags -->
-<meta name="description"
-    content="Priyo TV is your ultimate destination for streaming live TV channels, movies, and shows online. Enjoy a wide range of entertainment options from the comfort of your home. Watch your favorite programs anytime, anywhere with Priyo TV.">
-<meta name="keywords" content="live tv, movies, shows, streaming, priyotv">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:title"
-    content="Priyo TV - Watch Live TV, Movies, and Shows Online - Priyo TV">
-<meta property="og:description"
-    content="Priyo TV is your ultimate destination for streaming live TV channels, movies, and shows online. Enjoy a wide range of entertainment options from the comfort of your home. Watch your favorite programs anytime, anywhere with Priyo TV.">
-<meta property="og:image" content="https://priyotv.net/img/cover.png">
-<meta property="og:url" content="https://priyotv.net">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Priyo TV - Watch Live TV, Movies, and Shows Online - Priyo TV">
-<meta name="twitter:description" content="Priyo TV is your ultimate destination for streaming live TV channels, movies, and shows online. Enjoy a wide range of entertainment options from the comfort of your home. Watch your favorite programs anytime, anywhere with Priyo TV.">
-<meta name="twitter:image" content="https://priyotv.net/img/cover.png">
-
-<!-- Favicon -->
-
-<link rel="shortcut icon" type="image/x-icon" href="https://priyotv.net/favicon.ico">
-
-<meta name="author" content="Sohel Rana">
-<meta name="robots" content="index, follow">
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Stack+Sans+Notch:wght@200..700&display=swap"
-    rel="stylesheet">
-
-<link rel="manifest" href="https://priyotv.net/manifest.json">
-<meta name="theme-color" content="#F61500">
-
-<link rel="preload" as="style" href="https://priyotv.net/build/assets/app-Bh8egsfk.css" /><link rel="preload" as="style" href="https://priyotv.net/build/assets/app-BRKXMWAJ.css" /><link rel="modulepreload" as="script" href="https://priyotv.net/build/assets/app-B8-Gr-36.js" /><link rel="stylesheet" href="https://priyotv.net/build/assets/app-Bh8egsfk.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://priyotv.net/build/assets/app-BRKXMWAJ.css" data-navigate-track="reload" /><script type="module" src="https://priyotv.net/build/assets/app-B8-Gr-36.js" data-navigate-track="reload"></script>
-<!-- Global header code come from backend -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JW6Z6BS961"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JW6Z6BS961');
-</script>
-
-<!-- Global js code come from backend -->
-
-
-
-<style>
-    :root.dark {
-        color-scheme: dark;
-    }
-</style>
-<script>
-    window.Flux = {
-        applyAppearance (appearance) {
-            let applyDark = () => document.documentElement.classList.add('dark')
-            let applyLight = () => document.documentElement.classList.remove('dark')
-
-            if (appearance === 'system') {
-                let media = window.matchMedia('(prefers-color-scheme: dark)')
-
-                window.localStorage.removeItem('flux.appearance')
-
-                media.matches ? applyDark() : applyLight()
-            } else if (appearance === 'dark') {
-                window.localStorage.setItem('flux.appearance', 'dark')
-
-                applyDark()
-            } else if (appearance === 'light') {
-                window.localStorage.setItem('flux.appearance', 'light')
-
-                applyLight()
-            }
-        }
-    }
-
-    window.Flux.applyAppearance(window.localStorage.getItem('flux.appearance') || 'system')
-</script>
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <title>FIFA World Cup 2026 LiveTV</title>
     
-<!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.list-item][wire\:loading\.list-item], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
-</head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Hind+Siliguri:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet" />
+    
+    <!-- Shaka Player CDN -->
+    <script src="https://unpkg.com/shaka-player@5.0.0/dist/shaka-player.compiled.js"></script>
 
-<body class="min-h-screen bg-white dark:bg-zinc-800">
+    <!-- PWA App Support -->
+    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/6pWG0J2v/IMG-20260622-142037.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/6pWG0J2v/IMG-20260622-142037.jpg" />
+    <script>
+      // Force unregister Service Workers and clear caches to ensure users get the new code immediately
+      const CURRENT_VERSION = 'v2_no_admin_live';
+      
+      async function clearAllCachesAndSW() {
+        try {
+          // Unregister all service workers
+          if ('serviceWorker' in navigator) {
+            const registrations = await navigator.serviceWorker.getRegistrations();
+            for (let registration of registrations) {
+              await registration.unregister();
+              console.log('SW unregistered successfully');
+            }
+          }
+          
+          // Clear all caches
+          if ('caches' in window) {
+            const keys = await caches.keys();
+            for (let key of keys) {
+              await caches.delete(key);
+              console.log('Cache cleared:', key);
+            }
+          }
+          
+          localStorage.setItem('app_version', CURRENT_VERSION);
+          console.log('Caches cleared and version set to:', CURRENT_VERSION);
+          
+          // Force a reload from the server to get fresh assets
+          window.location.reload(true);
+        } catch (e) {
+          console.error('Error in clearing cache/SW:', e);
+        }
+      }
 
-    <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
-        <nav
-            class="bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md mx-auto flex max-w-[1600px] items-center justify-between rounded-xl px-4 py-2.5 sm:px-6 shadow-lg">
-            <a class="flex items-center gap-2 font-bold tracking-tight active" href="https://priyotv.net">
-                <div
-                    class="grid h-8 w-8 place-items-center rounded-full bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    class="lucide lucide-play h-4 w-4 fill-accent text-accent" aria-hidden="true" >
-    <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z">
-    </path>
-</svg>
-                </div>
-                <span class="text-lg gradient-text">
-                    Priyo TV
-                </span>
-            </a>
-            <ul class="hidden items-center gap-1 md:flex">
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">Home</a></li>
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">Live TV</a></li>
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">Sports</a></li>
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">Movies</a></li>
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">Series</a></li>
-                <li><a class="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground active"
-                        href="/" data-status="active" aria-current="page">FIFA 26</a></li>
-            </ul>
-            <div class="flex items-center gap-1.5 sm:gap-2"><button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-9 w-9 rounded-full text-muted-foreground hover:bg-white/5 hover:text-foreground"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-search h-4 w-4" aria-hidden="true">
-                        <path d="m21 21-4.34-4.34"></path>
-                        <circle cx="11" cy="11" r="8"></circle>
-                    </svg></button><button
-                    class="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-9 w-9 hidden rounded-full text-muted-foreground hover:bg-white/5 hover:text-foreground sm:inline-flex"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-bell h-4 w-4" aria-hidden="true">
-                        <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
-                        <path
-                            d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
-                        </path>
-                    </svg></button><button
-                    class="items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary shadow hover:bg-primary/90 px-4 py-2 hidden h-8 rounded-full gradient-primary text-xs font-semibold text-white shadow-[var(--shadow-glow)] hover:opacity-90 sm:inline-flex">Subscribe</button><button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground h-9 w-9 rounded-full bg-white/5 hover:bg-white/10"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-user h-4 w-4" aria-hidden="true">
-                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg></button></div>
-        </nav>
-    </header>
-
-    <main id="main">
-        <div wire:snapshot="{&quot;data&quot;:[],&quot;memo&quot;:{&quot;id&quot;:&quot;7JTJMT4ckpCDOTZala8c&quot;,&quot;name&quot;:&quot;frontend::home&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[&quot;554141925-1&quot;],&quot;assets&quot;:[&quot;554141925-0&quot;],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;8b9251813c566ff5d1eb11f3e1c1912c90f4d248bcde50399bc5cdf9aa2e62a5&quot;}" wire:effects="{&quot;scripts&quot;:{&quot;554141925-1&quot;:&quot;&lt;script&gt;\n    if (window.Swiper &amp;&amp; document.querySelector(&#039;.mySwiper&#039;)) {\n        new Swiper(&#039;.mySwiper&#039;, {\n            loop: true,\n            autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },\n            pagination: { el: &#039;.swiper-pagination&#039;, clickable: true },\n            navigation: { nextEl: &#039;.swiper-button-next&#039;, prevEl: &#039;.swiper-button-prev&#039; },\n            effect: \&quot;fade\&quot;,\n        });\n    }\n&lt;\/script&gt;\n    &quot;}}" wire:id="7JTJMT4ckpCDOTZala8c" wire:name="frontend::home" class="min-h-screen">
-
-    <!-- Hero Section -->
-    <!--[if BLOCK]><![endif]-->    <section class="swiper mySwiper relative h-[78vh] min-h-[560px] mx-auto w-full overflow-hidden">
-        <div class="swiper-wrapper">
-            <!--[if BLOCK]><![endif]-->            <div class="swiper-slide">
-                <div class="absolute inset-0 transition-opacity duration-700 opacity-100">
-                    <img src="https://priyotv.net/storage/sliders/6zIqJGtjOSxiI2HLw5cf0jhZQnna1qopzUXqZ2oJ.png" loading="lazy"
-                        alt="FIFA World Cup 2026" class="h-full w-full object-cover">
-                    <div class="absolute inset-0 bg-linear-to-r from-white via-white/70 to-transparent"></div>
-                    <div class="absolute inset-0 bg-[image:var(--gradient-hero)]"></div>
-                </div>
-
-                <div
-                    class="relative z-10 flex h-full mx-auto max-w-[1700px] flex-col justify-end px-4 pb-24 sm:px-8 lg:px-12">
-                    <div class="max-w-xl space-y-4 sm:max-w-3xl">
-                        <h1 class="text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl lg:text-7xl">
-                            FIFA World Cup 2026
-                        </h1>
-                        <p class="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                            Catch all the action of FIFA World Cup 2026 with live streaming of football matches, highlights, and exclusive content.
-                        </p>
-                        <div class="flex flex-wrap items-center gap-3 pt-2">
-                            <a class="inline font-medium underline-offset-[6px] hover:decoration-current underline [[data-color]&gt;&amp;]:text-inherit [[data-color]&gt;&amp;]:decoration-current/20 dark:[[data-color]&gt;&amp;]:decoration-current/50 [[data-color]&gt;&amp;]:hover:decoration-current text-[var(--color-accent-content)] decoration-[color-mix(in_oklab,var(--color-accent-content),transparent_80%)]" href="https://priyotv.net/watch/t-sports-hd" data-flux-link ><button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-[var(--color-accent)] hover:bg-[color-mix(in_oklab,_var(--color-accent),_transparent_10%)] text-[var(--color-accent-foreground)] border border-black/10 dark:border-0 shadow-[inset_0px_1px_--theme(--color-white/.2)] [[data-flux-button-group]_&amp;]:border-e-0 [:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-[1px] dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-e-0 dark:[:is([data-flux-button-group]&gt;&amp;:last-child,_[data-flux-button-group]_:last-child&gt;&amp;)]:border-s-[1px] [:is([data-flux-button-group]&gt;&amp;:not(:first-child),_[data-flux-button-group]_:not(:first-child)&gt;&amp;)]:border-s-[color-mix(in_srgb,var(--color-accent-foreground),transparent_85%)]   rounded-full!" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
-        <svg class="shrink-0 [:where(&amp;)]:size-4" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
-  <path d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z"/>
-</svg>
-
-                
-                    
-            
-            <span>Play</span>
-    </button></a>                            <a class="inline font-medium underline-offset-[6px] hover:decoration-current underline [[data-color]&gt;&amp;]:text-inherit [[data-color]&gt;&amp;]:decoration-current/20 dark:[[data-color]&gt;&amp;]:decoration-current/50 [[data-color]&gt;&amp;]:hover:decoration-current text-[var(--color-accent-content)] decoration-[color-mix(in_oklab,var(--color-accent-content),transparent_80%)]" href="https://priyotv.net/details/t-sports-hd" data-flux-link ><button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg ps-3 pe-4 inline-flex  bg-white hover:bg-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-600/75 text-zinc-800 dark:text-white border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-600 dark:hover:border-zinc-600 shadow-xs [[data-flux-button-group]_&amp;]:border-s-0 [:is([data-flux-button-group]&gt;&amp;:first-child,_[data-flux-button-group]_:first-child&gt;&amp;)]:border-s-[1px]   rounded-full!" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
-        <svg
-    class="shrink-0 [:where(&amp;)]:size-4"
-    data-flux-icon
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    aria-hidden="true"
-    data-slot="icon"
->
-  <circle cx="12" cy="12" r="10" />
-  <path d="M12 16v-4" />
-  <path d="M12 8h.01" />
-</svg>
-        
-                    
-            
-            <span>More Info</span>
-    </button></a>                            <a class="inline font-medium underline-offset-[6px] hover:decoration-current underline [[data-color]&gt;&amp;]:text-inherit [[data-color]&gt;&amp;]:decoration-current/20 dark:[[data-color]&gt;&amp;]:decoration-current/50 [[data-color]&gt;&amp;]:hover:decoration-current text-[var(--color-accent-content)] decoration-[color-mix(in_oklab,var(--color-accent-content),transparent_80%)]" href="#" data-flux-link ><button type="button" class="relative items-center font-medium justify-center gap-2 whitespace-nowrap disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none justify-center h-10 text-sm rounded-lg w-10 inline-flex  bg-white hover:bg-zinc-50 dark:bg-zinc-700 dark:hover:bg-zinc-600/75 text-zinc-800 dark:text-white border border-zinc-200 hover:border-zinc-200 border-b-zinc-300/80 dark:border-zinc-600 dark:hover:border-zinc-600 shadow-xs [[data-flux-button-group]_&amp;]:border-s-0 [:is([data-flux-button-group]&gt;&amp;:first-child,_[data-flux-button-group]_:first-child&gt;&amp;)]:border-s-[1px]   rounded-full!" data-flux-button="data-flux-button" data-flux-group-target="data-flux-group-target">
-        <svg class="shrink-0 [:where(&amp;)]:size-5" data-flux-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-  <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"/>
-</svg>
-    </button></a>                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--[if ENDBLOCK]><![endif]-->
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-    <!--[if ENDBLOCK]><![endif]-->
-    <div class="mx-auto max-w-[1700px] space-y-2">
-        <!-- Live Sports Section -->
-        <section class="relative">
-            <div class="flex items-end justify-between px-4 pb-3 sm:px-8 lg:px-12">
-                <div>
-                    <h2 class="text-lg font-bold tracking-tight sm:text-xl">Live Sports</h2>
-                    <p class="text-xs text-muted-foreground">Streaming right now</p>
-                </div>
-                <button
-                    class="text-xs font-medium text-muted-foreground transition-colors hover:gradient-text hover:bg-clip-text">
-                    View all →
-                </button>
-            </div>
-            <div class="relative">
-                <button aria-label="Scroll left"
-                    class="absolute left-1 top-1/2 z-10 hidden -translate-y-1/2 rounded-full glass p-2 opacity-0 transition-all group-hover/rail:opacity-100 hover:scale-110 sm:block"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-left h-4 w-4" aria-hidden="true">
-                        <path d="m15 18-6-6 6-6"></path>
-                    </svg>
-                </button>
-                <button aria-label="Scroll right"
-                    class="absolute right-1 top-1/2 z-10 hidden -translate-y-1/2 rounded-full glass p-2 opacity-0 transition-all group-hover/rail:opacity-100 hover:scale-110 sm:block"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right h-4 w-4" aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg>
-                </button>
-
-                <div class="hide-scrollbar flex gap-3 overflow-x-auto scroll-smooth px-4 sm:gap-4 sm:px-8 lg:px-12">
-
-                    <!--[if BLOCK]><![endif]-->                    <a href="https://priyotv.net/details/iScreen" class="group/ch shrink-0 text-center">
-                        <div class="relative mx-auto h-20 w-20 sm:h-24 sm:w-24">
-                            <div
-                                class="absolute inset-0 rounded-full gradient-primary opacity-0 blur-md transition-opacity duration-300 group-hover/ch:opacity-60">
-                            </div>
-                            <div
-                                class="relative h-full w-full overflow-hidden rounded-full border-2 border-accent bg-accent/10 transition-transform duration-300">
-                                <img src="https://yt3.googleusercontent.com/48Sb61za1Z1IMlYo77-rV0UtcwqmKlWsU1CbIxSgiE3wPZJXl4xQiw4JuuychOQzoafe2Qgx2g=s900-c-k-c0x00ffffff-no-rj" alt="iScreen" loading="lazy"
-                                    class="h-full w-full object-cover">
-                            </div>
-                            <span
-                                class="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-lg">
-                                Live
-                            </span>
-                        </div>
-                        <p class="mt-3 line-clamp-1 w-24 text-base font-bold text-dark">
-                            iScreen
-                        </p>
-                    </a>
-                                        <a href="https://priyotv.net/details/t-sports-hd" class="group/ch shrink-0 text-center">
-                        <div class="relative mx-auto h-20 w-20 sm:h-24 sm:w-24">
-                            <div
-                                class="absolute inset-0 rounded-full gradient-primary opacity-0 blur-md transition-opacity duration-300 group-hover/ch:opacity-60">
-                            </div>
-                            <div
-                                class="relative h-full w-full overflow-hidden rounded-full border-2 border-accent bg-accent/10 transition-transform duration-300">
-                                <img src="https://s3.aynaott.com/storage/dbc585f70a60b9855b6e13a8ce4cb6f4" alt="T Sports HD" loading="lazy"
-                                    class="h-full w-full object-cover">
-                            </div>
-                            <span
-                                class="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-lg">
-                                Live
-                            </span>
-                        </div>
-                        <p class="mt-3 line-clamp-1 w-24 text-base font-bold text-dark">
-                            T Sports HD
-                        </p>
-                    </a>
-                                        <a href="https://priyotv.net/details/fifa-world-cup-2026-bd" class="group/ch shrink-0 text-center">
-                        <div class="relative mx-auto h-20 w-20 sm:h-24 sm:w-24">
-                            <div
-                                class="absolute inset-0 rounded-full gradient-primary opacity-0 blur-md transition-opacity duration-300 group-hover/ch:opacity-60">
-                            </div>
-                            <div
-                                class="relative h-full w-full overflow-hidden rounded-full border-2 border-accent bg-accent/10 transition-transform duration-300">
-                                <img src="https://priyotv.net/upload/53aSeDH.png" alt="FiFa World Cup 2026 [ Only BD ]" loading="lazy"
-                                    class="h-full w-full object-cover">
-                            </div>
-                            <span
-                                class="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-lg">
-                                Live
-                            </span>
-                        </div>
-                        <p class="mt-3 line-clamp-1 w-24 text-base font-bold text-dark">
-                            FiFa World Cup 2026 [ Only BD ]
-                        </p>
-                    </a>
-                                        <a href="https://priyotv.net/details/fifa-world-cup-2026" class="group/ch shrink-0 text-center">
-                        <div class="relative mx-auto h-20 w-20 sm:h-24 sm:w-24">
-                            <div
-                                class="absolute inset-0 rounded-full gradient-primary opacity-0 blur-md transition-opacity duration-300 group-hover/ch:opacity-60">
-                            </div>
-                            <div
-                                class="relative h-full w-full overflow-hidden rounded-full border-2 border-accent bg-accent/10 transition-transform duration-300">
-                                <img src="https://priyotv.net/upload/FIFA-world-cup-2026-752x440.webp" alt="fifa world cup 2026 - othar cuntry parson play" loading="lazy"
-                                    class="h-full w-full object-cover">
-                            </div>
-                            <span
-                                class="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red-500 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-lg">
-                                Live
-                            </span>
-                        </div>
-                        <p class="mt-3 line-clamp-1 w-24 text-base font-bold text-dark">
-                            fifa world cup 2026 - othar cuntry parson play
-                        </p>
-                    </a>
-                    <!--[if ENDBLOCK]><![endif]-->                </div>
-            </div>
-        </section>
-
-        
-
-        
-    </div>
-
-    <div class="flex justify-center items-center text-center p-2 pt-4">
-        <p>world cup live - World cup live streaming - World Cup live stream free</p>
-    </div>
-</div>
-    </main>
-
-    <div x-persist="toast">
-    <ui-toast-group x-data x-on:toast-show.document="$el.showToast($event.detail)" popover="manual" position="bottom center"  wire:ignore>
-    <ui-toast x-data x-on:toast-show.document="! $el.closest('ui-toast-group') && $el.showToast($event.detail)" popover="manual" position="bottom end" wire:ignore>
-    <template>
-        <div class="max-w-sm in-[ui-toast-group]:max-w-auto in-[ui-toast-group]:w-xs sm:in-[ui-toast-group]:w-sm" data-variant="" data-flux-toast-dialog>
-            <div class="p-2 flex rounded-xl shadow-lg bg-white border border-zinc-200 border-b-zinc-300/80 dark:bg-zinc-700 dark:border-zinc-600">
-                <div class="flex-1 flex items-start gap-4 overflow-hidden">
-                    <div class="flex-1 py-1.5 ps-2.5 flex gap-2">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="hidden [[data-flux-toast-dialog][data-variant=success]_&]:block shrink-0 mt-0.5 size-4 text-lime-600 dark:text-lime-400">
-                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z" clip-rule="evenodd" />
-                        </svg>
-
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="hidden [[data-flux-toast-dialog][data-variant=warning]_&]:block shrink-0 mt-0.5 size-4 text-amber-500 dark:text-amber-400">
-                            <path fill-rule="evenodd" d="M6.701 2.25c.577-1 2.02-1 2.598 0l5.196 9a1.5 1.5 0 0 1-1.299 2.25H2.804a1.5 1.5 0 0 1-1.3-2.25l5.197-9ZM8 4a.75.75 0 0 1 .75.75v3a.75.75 0 1 1-1.5 0v-3A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
-                        </svg>
-
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="hidden [[data-flux-toast-dialog][data-variant=info]_&]:block shrink-0 mt-0.5 size-4 text-cyan-500 dark:text-cyan-400">
-                            <path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8h-1.5Z" clip-rule="evenodd" />
-                        </svg>
-
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="hidden [[data-flux-toast-dialog][data-variant=danger]_&]:block shrink-0 mt-0.5 size-4 text-rose-500 dark:text-rose-400">
-                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14ZM8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <div>
-                            
-                            <div class="font-medium text-sm text-zinc-800 dark:text-white [&:not(:empty)+div]:font-normal [&:not(:empty)+div]:text-zinc-500 [&:not(:empty)+div]:dark:text-zinc-300 [&:not(:empty)]:pb-2"><slot name="heading"></slot></div>
-
-                            
-                            <div class="font-medium text-sm text-zinc-800 dark:text-white"><slot name="text"></slot></div>
-
-                            
-                            <template name="link">
-                                <a class="block mt-2 font-medium text-sm text-[var(--color-accent-content)] decoration-[color-mix(in_oklab,var(--color-accent-content),transparent_80%)] underline underline-offset-[6px] hover:decoration-current"><slot name="text"></slot></a>
-                            </template>
-                        </div>
-                    </div>
-
-                    
-                    <ui-close class="flex items-center">
-                        <button type="button" class="inline-flex items-center font-medium justify-center gap-2 truncate disabled:opacity-50 dark:disabled:opacity-75 disabled:cursor-default h-8 text-sm rounded-md w-8 bg-transparent hover:bg-zinc-800/5 dark:hover:bg-white/15 text-zinc-400 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white" as="button">
-                            <div>
-                                <svg class="[:where(&)]:size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"></path>
-                                </svg>
-                            </div>
-                        </button>
-                    </ui-close>
-                </div>
-            </div>
-        </div>
-    </template>
-</ui-toast>
-</ui-toast-group>
-    </div>
-
-    <footer class="border-t border-white/5 bg-white px-4 py-12 sm:px-8 lg:px-12">
-    <div class="mx-auto max-w-[1600px]">
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
-            <div class="lg:col-span-2">
-                <div class="flex items-center gap-2 font-bold">
-                    <div>
-    <a href="https://priyotv.net" class="flex items-center gap-2 shrink-0">
-        <div
-            class="grid h-8 w-8 place-items-center rounded-full bg-accent/10 dark:bg-zinc-800/80 backdrop-blur-md shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-    class="lucide lucide-play h-4 w-4 fill-accent text-accent" aria-hidden="true" >
-    <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z">
-    </path>
-</svg>
-        </div>
-        <span class="text-lg gradient-text">
-            Priyo TV
-        </span>
-    </a>
-</div>
-                </div>
-                <p class="mt-4 max-w-sm text-sm text-muted-foreground">
-                    Priyo TV - Watch Live TV, Movies, and Shows Online
-                </p>
-                <div class="mt-4 flex gap-2">
-                    <button aria-label="social"
-                        class="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-colors hover:bg-white/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-instagram h-4 w-4" aria-hidden="true">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                        </svg></button><button aria-label="social"
-                        class="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-colors hover:bg-white/10"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-twitter h-4 w-4" aria-hidden="true">
-                            <path
-                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                            </path>
-                        </svg></button><button aria-label="social"
-                        class="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-colors hover:bg-white/10"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-facebook h-4 w-4" aria-hidden="true">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg></button><button aria-label="social"
-                        class="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition-colors hover:bg-white/10"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-youtube h-4 w-4" aria-hidden="true">
-                            <path
-                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
-                            </path>
-                            <path d="m10 15 5-3-5-3z"></path>
-                        </svg></button>
-                </div>
-            </div>
-            <div>
-                <h4 class="mb-3 text-sm font-semibold">Explore</h4>
-                <ul class="space-y-2">
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Home</a>
-                    </li>
-                    <li><a href="#" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Live
-                            TV</a></li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Movies</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Series</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Sports</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="mb-3 text-sm font-semibold">Company</h4>
-                <ul class="space-y-2">
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">About</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Careers</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Press</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="mb-3 text-sm font-semibold">Help</h4>
-                <ul class="space-y-2">
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Account</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Devices</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Plans</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div
-            class="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-muted-foreground sm:flex-row">
-            <p>© 2026 Priyo TV. All rights reserved.</p>
-            <p>Priyo TV - Watch Live TV, Movies, and Shows Online</p>
-        </div>
-    </div>
-</footer>
-
-
-
-<script src="https://priyotv.net/flux/flux.js?id=f705ecf0" data-navigate-once></script>
-
-<!-- Global footer code come from backend -->
-
-
-<!-- Global js code come from backend -->
-
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('SW registered:', reg))
-                .catch(err => console.log('SW registration failed:', err));
-        });
-    }
-</script>
-<!-- Livewire Scripts -->
-<script src="https://priyotv.net/livewire-63b40799/livewire.js?id=4735e441"   data-csrf="9zemoBJlJUjNlvp3PaH3t9At6fH6HuKkpLdY8N6Q" data-module-url="https://priyotv.net/livewire-63b40799" data-update-uri="https://priyotv.net/livewire-63b40799/update" data-navigate-once="true"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b26dd59ce61d417f983f3ca5da83d087","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
-
+      // Check if we need to force update
+      const savedVersion = localStorage.getItem('app_version');
+      if (savedVersion !== CURRENT_VERSION) {
+        clearAllCachesAndSW();
+      } else {
+        // Keep checking and unregistering in the background just in case
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(registrations => {
+            for (let registration of registrations) {
+              registration.unregister();
+            }
+          });
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-QpVNGc46.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CjMNhGhr.css">
+  </head>
+  <body class="bg-[#07111f] text-white">
+    <div id="root"></div>
+  </body>
 </html>
