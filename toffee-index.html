@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toffee - Watch Live TV, Movies, and Shows Online</title>
+    <link rel="canonical" href="https://priyotv.net" />
+    <link rel="alternate" hreflang="en-US" href="https://priyotv.net" />
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Toffee is your ultimate destination for streaming live TV channels, movies, and shows online.">
+    <meta name="keywords" content="live tv, movies, shows, streaming, toffee">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Toffee - Watch Live TV, Movies, and Shows Online">
+    <meta property="og:description" content="Stream unlimited entertainment with Toffee.">
+    <meta property="og:image" content="https://priyotv.net/img/cover.png">
+    <meta property="og:url" content="https://priyotv.net">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Toffee - Watch Live TV, Movies, and Shows Online">
+    <meta name="twitter:description" content="Stream unlimited entertainment with Toffee.">
+    <meta name="twitter:image" content="https://priyotv.net/img/cover.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://priyotv.net/favicon.ico">
+
+    <meta name="author" content="Toffee Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="https://priyotv.net/manifest.json">
+    <meta name="theme-color" content="#E91E63">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #E91E63;
+            --secondary: #FF1493;
+            --dark: #0a0a0a;
+            --darker: #141414;
+            --light: #f5f5f5;
+            --text: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border: #2a2a2a;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+            color: var(--text);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.95), transparent);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+        }
+
+        .nav-menu {
+            display: none;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        .nav-menu li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .nav-menu li a:hover {
+            background: rgba(233, 30, 99, 0.1);
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem;
+        }
+
+        .icon-btn:hover {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 60px;
+            padding-bottom: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(10, 10, 10, 0.8), transparent);
+            top: 0;
+            left: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            padding: 2rem;
+            animation: slideUp 0.8s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: var(--text);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(233, 30, 99, 0.2);
+            border-color: var(--primary);
+        }
+
+        /* Section Styles */
+        .section {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-view-all {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .section-view-all:hover {
+            gap: 0.5rem;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 1200px) {
+            .content-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Content Card */
+        .content-card {
+            position: relative;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            cursor: pointer;
+            group: card;
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: scale(1.05);
+            z-index: 100;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+
+        .content-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .card-rating {
+            background: var(--primary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border: none;
+            border-radius: 50%;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: var(--primary);
+        }
+
+        .badge {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            background: var(--primary);
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        /* Horizontal Scroll Section */
+        .scroll-container {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 0 2rem;
+            scroll-padding-left: 2rem;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: var(--border);
+            border-radius: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .scroll-item {
+            flex-shrink: 0;
+            width: 200px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .search-wrapper {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(233, 30, 99, 0.3);
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
+            color: var(--text);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .filter-btn:hover {
+            background: rgba(233, 30, 99, 0.2);
+            border-color: var(--primary);
+        }
+
+        /* Profile Dropdown */
+        .profile-menu {
+            position: relative;
+        }
+
+        .profile-btn {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .profile-btn:hover {
+            background: rgba(233, 30, 99, 0.2);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--darker);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            min-width: 200px;
+            margin-top: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .profile-menu.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 0.75rem 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(233, 30, 99, 0.2);
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: scale(1.1);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--darker);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: modalSlide 0.3s ease;
+        }
+
+        @keyframes modalSlide {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .section {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero-content {
+                padding: 1.5rem 1rem;
+                max-width: 100%;
+            }
+
+            .section-view-all {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">▶</div>
+                <span>Toffee</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#sports">Sports</a></li>
+            </ul>
+
+            <div class="header-icons">
+                <button class="icon-btn" onclick="toggleSearch()">🔍</button>
+                <button class="icon-btn">🔔</button>
+                <div class="profile-menu">
+                    <button class="profile-btn icon-btn" onclick="toggleProfileMenu()">👤</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">My Profile</a>
+                        <a href="#" class="dropdown-item">My Watchlist</a>
+                        <a href="#" class="dropdown-item">Continue Watching</a>
+                        <a href="#" class="dropdown-item">My Downloads</a>
+                        <a href="#" class="dropdown-item">Settings</a>
+                        <a href="#" class="dropdown-item">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero" id="home">
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=1200&h=600&fit=crop" alt="FIFA World Cup">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&h=600&fit=crop" alt="Movie Night">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1495201021206-98901cc08fe1?w=1200&h=600&fit=crop" alt="Series">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">FIFA World Cup 2026</h1>
+                <p class="hero-description">Watch live matches, highlights, and exclusive content from the biggest football tournament in the world.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="playVideo()">▶ Play Now</button>
+                    <button class="btn btn-secondary" onclick="addToWatchlist()">+ Add to Watchlist</button>
+                    <button class="btn btn-secondary" onclick="shareContent()">📤 Share</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container" id="searchContainer" style="display: none;">
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Search movies, shows, sports..." id="searchInput">
+                <button class="filter-btn" onclick="filterContent('movies')">Movies</button>
+                <button class="filter-btn" onclick="filterContent('series')">Series</button>
+                <button class="filter-btn" onclick="filterContent('sports')">Sports</button>
+                <button class="filter-btn" onclick="filterContent('latest')">Latest</button>
+            </div>
+        </div>
+
+        <!-- Trending Section -->
+        <section class="section" id="trending">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Trending Now 🔥</h2>
+                    <p class="section-subtitle">Most watched this week</p>
+                </div>
+                <a href="#" class="section-view-all">View all →</a>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">NOW</span>
+                    <div class="card-overlay">
+                        <div class="card-title">FIFA World Cup 2026</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 9.2</span>
+                            <span>2h 15m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">NEW</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Action Thriller</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.7</span>
+                            <span>1h 45m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1495201021206-98901cc08fe1?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">HOT</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Drama Series</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 9.0</span>
+                            <span>S1 E8</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1533613220915-121e63289ab5?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Sports Live</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.9</span>
+                            <span>LIVE</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1596447684392-88657db54559?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">TOP</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Comedy Special</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.5</span>
+                            <span>1h 30m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movies Section -->
+        <section class="section" id="movies">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Popular Movies 🎬</h2>
+                    <p class="section-subtitle">Handpicked for you</p>
+                </div>
+                <a href="#" class="section-view-all">View all →</a>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1612036782180-69c978e6e196?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Sci-Fi Adventure</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.8</span>
+                            <span>2h 30m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Sports Drama</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 9.1</span>
+                            <span>2h 00m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1620188511411-7a63f1ff1ff5?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Mystery Thriller</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.6</span>
+                            <span>2h 10m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Romance Comedy</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.3</span>
+                            <span>1h 55m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1533613220915-121e63289ab5?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Horror Film</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.4</span>
+                            <span>2h 05m</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Series Section -->
+        <section class="section" id="series">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Binge-Worthy Series 📺</h2>
+                    <p class="section-subtitle">New episodes every week</p>
+                </div>
+                <a href="#" class="section-view-all">View all →</a>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1596447684392-88657db54559?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">NEW</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Drama Series</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 9.2</span>
+                            <span>S2 E5</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Thriller Series</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.9</span>
+                            <span>S1 E10</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1533613220915-121e63289ab5?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Comedy Series</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.7</span>
+                            <span>S3 E2</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1620188511411-7a63f1ff1ff5?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Fantasy Series</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 9.0</span>
+                            <span>S1 E8</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-title">Documentary</div>
+                        <div class="card-meta">
+                            <span class="card-rating">★ 8.8</span>
+                            <span>Ep. 6</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Section -->
+        <section class="section" id="sports">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Live Sports 🏆</h2>
+                    <p class="section-subtitle">Live streaming right now</p>
+                </div>
+                <a href="#" class="section-view-all">View all →</a>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1511339901601-b06dda5b0bcd?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Football Match</div>
+                        <div class="card-meta">
+                            <span class="card-rating">LIVE</span>
+                            <span>1-1</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dab16e884?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Cricket Match</div>
+                        <div class="card-meta">
+                            <span class="card-rating">LIVE</span>
+                            <span>185/3</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Tennis Championship</div>
+                        <div class="card-meta">
+                            <span class="card-rating">LIVE</span>
+                            <span>Set 2</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0510b21?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Basketball Game</div>
+                        <div class="card-meta">
+                            <span class="card-rating">LIVE</span>
+                            <span>78-82</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <img src="https://images.unsplash.com/photo-1505921957671-cc66c86bed1c?w=300&h=400&fit=crop" alt="Content" class="card-image">
+                    <span class="badge">LIVE</span>
+                    <div class="card-overlay">
+                        <div class="card-title">Boxing Match</div>
+                        <div class="card-meta">
+                            <span class="card-rating">LIVE</span>
+                            <span>Rd 3</span>
+                        </div>
+                        <button class="play-button" onclick="playVideo()">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Player Modal -->
+    <div class="modal" id="playerModal">
+        <div class="modal-content" style="background: var(--darker); position: relative; max-width: 90%; max-height: 80vh;">
+            <button class="close-btn" onclick="closePlayer()" style="position: absolute; top: 1rem; right: 1rem; z-index: 10;">✕</button>
+            <div style="width: 100%; height: 500px; background: black; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; margin-bottom: 1rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">▶</div>
+                    <p style="color: var(--text-secondary);">Video Player</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Your video would play here</p>
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.5rem;">Video Title</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Description goes here</p>
+                <div style="display: flex; gap: 1rem;">
+                    <button class="btn btn-primary">Add to Watchlist</button>
+                    <button class="btn btn-secondary">Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="#" class="logo" style="color: var(--text); text-decoration: none;">
+                        <div class="logo-icon">▶</div>
+                        <span>Toffee</span>
+                    </a>
+                    <p style="color: var(--text-secondary); margin-top: 1rem; line-height: 1.6;">Your ultimate destination for streaming live TV, movies, shows, and sports.</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#">f</a>
+                        <a href="#">𝕏</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Trending</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="#series">Series</a></li>
+                        <li><a href="#sports">Sports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Toffee. All rights reserved.</p>
+                <p>Streaming Entertainment at its finest</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000);
+
+        // Search Toggle
+        function toggleSearch() {
+            const searchContainer = document.getElementById('searchContainer');
+            searchContainer.style.display = searchContainer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Profile Menu Toggle
+        function toggleProfileMenu() {
+            const profileMenu = document.querySelector('.profile-menu');
+            profileMenu.classList.toggle('active');
+        }
+
+        // Close profile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const profileMenu = document.querySelector('.profile-menu');
+            if (!profileMenu.contains(e.target)) {
+                profileMenu.classList.remove('active');
+            }
+        });
+
+        // Video Player
+        function playVideo() {
+            document.getElementById('playerModal').classList.add('active');
+        }
+
+        function closePlayer() {
+            document.getElementById('playerModal').classList.remove('active');
+        }
+
+        // Add to Watchlist
+        function addToWatchlist() {
+            alert('✅ Added to your watchlist!');
+        }
+
+        // Share Content
+        function shareContent() {
+            alert('📤 Share this content with your friends!');
+        }
+
+        // Filter Content
+        function filterContent(type) {
+            alert(`🔍 Filtering by: ${type}`);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('playerModal').addEventListener('click', (e) => {
+            if (e.target.id === 'playerModal') {
+                closePlayer();
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
+</html>
